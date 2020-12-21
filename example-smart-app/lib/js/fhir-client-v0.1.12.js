@@ -17204,7 +17204,8 @@ BBClient.ready = function(input, callback, errback){
     }
   }
   accessTokenResolver.done(function(tokenResponse){
-
+    console.log("tokenResponse:");
+    console.log(tokenResponse);
     if (!tokenResponse || !tokenResponse.state) {
       return args.errback("No 'state' parameter found in authorization response.");
     }
